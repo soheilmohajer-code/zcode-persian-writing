@@ -1,0 +1,9 @@
+{
+  "name": "persian-writing-plugin",
+  "private": true,
+  "type": "module",
+  "description": "تست‌های افزونهٔ نگارش فارسی — فقط برای توسعه، جزو الزامات نصب افزونه نیست",
+  "scripts": {
+    "test": "node --test tests/fa-fix.test.mjs tests/skill-e2e.test.mjs"
+  }
+}

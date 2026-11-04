@@ -1,0 +1,9 @@
+{
+  "name": "persian-writing",
+  "version": "0.2.1",
+  "description": "Persian (Farsi) writing quality for the ZCode agent: orthography rules (half-space/ZWNJ, punctuation, Persian digits, correct ی/ک) and RTL/LTR bidirectional handling for replies, documents and UI. Includes a guaranteed UserPromptSubmit hook, a mechanical fa-fix script, and the /fa-fix command.",
+  "author": { "name": "exzcode" },
+  "skills": "./skills",
+  "commands": "./commands",
+  "hooks": "./hooks/hooks.json"
+}

@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "[\\u0600-\\u06FF\\u200C\\u200F]",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/prompt-hook.mjs"],
+            "timeoutMs": 5000
+          }
+        ]
+      }
+    ]
+  }
+}

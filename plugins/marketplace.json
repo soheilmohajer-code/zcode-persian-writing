@@ -1,0 +1,15 @@
+{
+  "name": "dev-exzcode-fa",
+  "plugins": [
+    {
+      "name": "persian-writing",
+      "source": "./persian-writing",
+      "version": "0.2.1",
+      "description": "Persian (Farsi) writing rules for the ZCode agent: orthography (half-space/ZWNJ, punctuation, Persian digits), RTL/LTR bidirectional handling, a guaranteed prompt hook, a mechanical fixer script and the /fa-fix command.",
+      "displayName": "Persian Writing",
+      "displayName_i18n": { "fa": "نگارش فارسی" },
+      "description_i18n": { "fa": "قواعد نگارش فارسی و راست‌چین/چپ‌چین برای ایجنت: نیم‌فاصله، نشانه‌گذاری، ارقام فارسی و مدیریت دوجهتهٔ متن." },
+      "category": "productivity"
+    }
+  ]
+}
