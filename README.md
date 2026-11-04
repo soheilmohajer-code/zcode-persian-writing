@@ -37,15 +37,32 @@ plugins/
 
 ## نصب از گیت‌هاب (برای دیگران)
 
+### راه ۱ — ریلیز (ساده‌ترین)
+
+1. از صفحهٔ **Releases** مخزن، آخرین `persian-writing-x.y.z.zip` را بگیر و Extract کن؛ همان پوشهٔ extract شده، ریشهٔ مارکت است.
+2. در ZCode: **Plugin Marketplace → Add → Add Plugin Marketplace** و همان پوشه را بده.
+3. از **Personal → dev-exzcode-fa** افزونهٔ «Persian Writing / نگارش فارسی» را **Install** کن.
+4. به‌روزرسانی: zip نسخهٔ جدید را Extract و جایگزین پوشهٔ قبل کن، سپس **Refresh this marketplace** + **Update**.
+
+### راه ۲ — کلون (برای دنبال‌کردن تغییرها)
+
 1. مخزن را کلون کن:
    ```bash
    git clone https://github.com/USERNAME/zcode-persian-writing.git
    ```
-2. در ZCode: **Plugin Marketplace → Add → Add Plugin Marketplace** و مسیر پوشهٔ `plugins` داخل مخزن کلون‌شده را بده (مثلاً `C:\src\zcode-persian-writing\plugins`).
-3. از **Personal → dev-exzcode-fa** افزونهٔ «Persian Writing / نگارش فارسی» را **Install** کن.
-4. به‌روزرسانی‌های بعدی: `git pull` داخل مخزن + **Refresh this marketplace** + **Update**.
+2. در ZCode: مسیر پوشهٔ `plugins` داخل مخزن کلون‌شده را به‌عنوان بازار اضافه کن (مثلاً `C:\src\zcode-persian-writing\plugins`).
+3. Install کن؛ به‌روزرسانی: `git pull` داخل مخزن + **Refresh this marketplace** + **Update**.
 
-> نیازمندی: Node روی سیستم (برای هوک و اسکریپت اصلاح). نصب مستقیم با نشانی گیت‌هاب از داخل UI آزموده نشده؛ جریان کلون + مارکت محلی، مسیر تضمینی است.
+> نیازمندی: Node روی سیستم (برای هوک و اسکریپت اصلاح). نصب مستقیم با نشانی گیت‌هاب از داخل UI آزموده نشده؛ هر دو راه بالا فقط یک پوشهٔ محلی می‌سازند و مسیر تضمینی‌اند.
+
+### انتشار نسخهٔ جدید (برای نگه‌دارنده)
+
+نسخه را در `plugin.json` و `marketplace.json` (هر دو) بالا ببر، تست‌ها را بگیر (`npm test`)، zip را بساز و در **Releases** با تگ `vx.y.z` هماهنگ با نسخهٔ مانیفست منتشر کن:
+
+```powershell
+# از ریشهٔ مخزن — خروجی: پوشهٔ extract شده خودش ریشهٔ مارکت است
+Compress-Archive -Path README.md,LICENSE,plugins\marketplace.json,plugins\persian-writing -DestinationPath dist\persian-writing-x.y.z.zip -Force
+```
 
 ## استفاده
 
